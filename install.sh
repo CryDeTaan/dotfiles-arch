@@ -147,53 +147,14 @@ function install_vim() {
 
 }
 
-function install_components() {
-
-    case $install_target in
-        none)
-            echo_yellow "Installing nothing..."
-            return
-        ;;
-        zsh)
-            install_zsh
-        ;;
-        vim)
-            install_vim
-        ;;
-    esac
-
-}
-
-while [[ $# -gt 1 ]]; do
-        case $1 in
-        zsh)
-        install_target="$1"
-        shift # past argument
-        ;;
-        vim)
-        uninstall_target="$1"
-        shift # past argument
-        ;;
-        *)
-        show_usage=true
-        ;;
-    esac
-    
-        shift # past argument or value
-done
-
-
-# usage
-if [ "$showusage" = true ]; then
-    usage
-    exit 2
-fi
-
-# install
-if [[ ! "$install_target" = false ]]; then
-    echo "Running install on: $install_target"
-    install_components
-else
-    echo_debug "Running usage(), no args -gt 1 found"
-    usage
-fi
+case $1 in
+zsh)
+install_zsh
+;;
+vim)
+install_vim
+;;
+*)
+usage
+;;
+esac
