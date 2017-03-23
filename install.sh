@@ -178,6 +178,9 @@ while [[ $# -gt 1 ]]; do
         show_usage=true
         ;;
     esac
+    
+        shift # past argument or value
+done
 
 
 # usage
