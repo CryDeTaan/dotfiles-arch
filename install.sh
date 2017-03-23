@@ -10,8 +10,11 @@ debug=false
 # defaults for file & config locations
 oh_my_zsh="$HOME/.oh-my-zsh"
 zsh_rc="$HOME/.zshrc"
-rc_backup_dir="$HOME/.dotfiles.d/backups"
 
+
+# defaults for commandline options
+install_app=false
+show_usage=false
 
 # helper functions
 # colors!
@@ -27,6 +30,17 @@ function popd() { command popd "$@" > /dev/null; }
 function curl() { command curl -fsSL "$1" -o "$2"; }
 
 
+function usage() {
+
+    cat <<EOF
+    Simple Dotfiles installer based on https://github.com/leonjza/dotfiles. Shouts to @leonjza
+    Usage: install app
+    Examples:
+        install zsh
+        install vim
+EOF
+
+}
 
 function install_zsh() {
 
@@ -72,7 +86,7 @@ function install_zsh() {
     else
         echo_yellow "Autosuggestions plugin already exists."
     fi
-    echo_debug "Symlinking $gitpath/rc/zshrc to $zsh_rc"
+    echo_debug "Symlinking .zshrc $gitpath/rc/zshrc to $zsh_rc"
     ln -sf $gitpath/rc/zshrc $zsh_rc
 
     echo "Symlinking *.zsh files to $HOME/.dotfiles.d/zshrc.d/"
@@ -135,3 +149,51 @@ function install_vim() {
     echo_green "Vim config install complete!"
 
 }
+
+function install_components() {
+
+    case $install_target in
+        none)
+            echo_yellow "Installing nothing..."
+            return
+        ;;
+        zsh)
+            install_zsh
+        ;;
+        vim)
+            install_vim
+        ;;
+    esac
+
+}
+
+while [[ $# -gt 1 ]]; do
+        case $1 in
+        zsh)
+        install_target="$1"
+        shift # past argument
+        ;;
+        vim)
+        uninstall_target="$1"
+        shift # past argument
+        ;;
+        *)
+        show_usage=true
+        ;;
+    esac
+
+
+# usage
+if [ "$showusage" = true ]; then
+    usage
+    exit 2
+fi
+
+# install
+if [[ ! "$install_target" = false ]]; then
+    echo "Running install on: $install_target"
+    install_components
+else
+    echo_debug "Running usage(), no args -gt 1 found"
+    usage
+fi
