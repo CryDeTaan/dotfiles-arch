@@ -175,7 +175,11 @@ function config_i3() {
     mkdir -p $HOME/.config/i3/scripts/
     
     echo "Symlinking i3 config files to $HOME/.config/i3/"
-    ln -sf $gitpath/config/i3/* $HOME/.config/i3/
+    ln -sf $gitpath/config/i3/config $HOME/.config/i3
+    ln -sf $gitpath/config/i3/*.conf $HOME/.config/i3
+
+    echo "Symlinking i3 script files to $HOME/.config/i3/scripts"
+    ln -sf $gitpath/config/i3/scripts/* $HOME/.config/i3/scripts
 
     echo_green "i3 configuration complete!"
 }
@@ -194,7 +198,7 @@ function config_rofi() {
     mkdir -p $HOME/.config/rofi
     
     echo "Symlinking rofi config file to $HOME/.config/rofi/"
-    ln -sf $gitpath/config/rofi/config $HOME/.config/rofi/config
+    ln -sf $gitpath/config/rofi/config $HOME/.config/rofi
 
     echo_green "rofi configuration complete!"
 }
