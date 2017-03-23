@@ -44,7 +44,7 @@ URxvt*color19:                        #3B758C
 URxvt*color20:                        #43a5d5
 URxvt*color21:                        #eeeeee
 
-Xcursor.size: 16W
+Xcursor.size: 10W
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
 URxvt.font: xft:roboto:regular:size=11
