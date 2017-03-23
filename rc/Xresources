@@ -1,0 +1,61 @@
+! special
+*.foreground:   #b7b8b9
+*.background:   #0c0d0e
+*.cursorColor:  #b7b8b9
+
+! black
+*.color0:       #0c0d0e
+*.color8:       #737475
+
+! red
+*.color1:       #dd3839
+*.color9:       #e31a1c
+
+! green
+*.color2:       #31a354
+*.color10:      #31a354
+
+! yellow
+*.color3:       #dca060
+*.color11:      #dca060
+
+! blue
+*.color4:       #3182bd
+*.color12:      #3182bd
+
+! magenta
+*.color5:       #756bb1
+*.color13:      #756bb1
+
+! cyan
+*.color6:       #6385da
+*.color14:      #80b1d3
+
+! white
+*.color7:       #b7b8b9
+*.color15:      #fcfdfe
+
+
+! 256 color space
+URxvt*color16:                        #db7b55
+URxvt*color17:                        #8a553f
+URxvt*color18:                        #8ec43d
+URxvt*color19:                        #3B758C
+URxvt*color20:                        #43a5d5
+URxvt*color21:                        #eeeeee
+
+Xcursor.size: 16W
+URxvt.urgentOnBell: true
+URxvt.scrollBar: false
+URxvt.font: xft:roboto:regular:size=11
+URxvt.depth: 24
+URxvt.url-launcher: /usr/bin/chrome
+URxvt.matcher.button: 1
+URxvt.perl-ext-common: default,matcher
+
+URxvt.letterSpace: -3
+
+URxvt.termName: rxvt-unicode
+
+urxvt*transparent: true
+urxvt*shading: 70
