@@ -23,9 +23,6 @@ function echo_green() { command echo -e "$(tput setaf 2; tput bold)$*$(tput sgr0
 function echo_red() { command echo -e "$(tput setaf 1)$*$(tput sgr0)"; }
 function echo_yellow() { command echo -e "$(tput setaf 3)$*$(tput sgr0)"; }
 function echo_debug() { if [ "$debug" = true ]; then command echo -e "$(tput setaf 3; tput bold)>>> $*$(tput sgr0)"; fi }
-# directories!
-function pushd() { command pushd "$@" > /dev/null; }
-function popd() { command popd "$@" > /dev/null; }
 # curl
 function curl() { command curl -fsSL "$1" -o "$2"; }
 
