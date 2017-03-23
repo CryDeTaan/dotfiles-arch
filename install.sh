@@ -4,7 +4,7 @@ set -e
 
 # static variables
 gitpath="$HOME/.dotfiles"
-gitorigin="https://github.com/leonjza/dotfiles.git"
+gitorigin="https://github.com/CryDeTaan/dotfiles-arch.git"
 debug=false
 
 # defaults for file & config locations
