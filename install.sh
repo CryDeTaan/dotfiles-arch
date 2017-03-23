@@ -11,11 +11,6 @@ debug=false
 oh_my_zsh="$HOME/.oh-my-zsh"
 zsh_rc="$HOME/.zshrc"
 
-
-# defaults for commandline options
-install_app=false
-show_usage=false
-
 # helper functions
 # colors!
 function echo() { command echo -e " * $*"; }
@@ -30,11 +25,16 @@ function curl() { command curl -fsSL "$1" -o "$2"; }
 function usage() {
 
     cat <<EOF
-    Simple Dotfiles installer based on https://github.com/leonjza/dotfiles. Shouts to @leonjza
-    Usage: install app
+    #################
+    Simple Dotfiles installer
+    #################
+    Based on https://github.com/leonjza/dotfiles. Shouts to @leonjza
+    
+    Usage: install <app>
     Examples:
         install zsh
         install vim
+        install xresources <-Customises urxvt
 EOF
 
 }
@@ -94,9 +94,9 @@ function install_zsh() {
 }
 
 
-function install_vim() {
+function config_vim() {
 
-    echo_green "Installing Vim configuration"
+    echo_green "Configuring Vim."
 
     # make sure vim is available
     if ! hash vim 2>/dev/null; then
@@ -147,12 +147,26 @@ function install_vim() {
 
 }
 
+function config_xresources() {
+
+    echo_green "Configuring Xresources."
+    
+    echo "Symlinking Xresources to $HOME/.Xresources"
+    ln -sf $gitpath/rc/Xresources $HOME/.Xresources
+
+    echo_green "Xresources configuration complete!"
+}
+
+
 case $1 in
 zsh)
 install_zsh
 ;;
 vim)
-install_vim
+config_vim
+;;
+xresources)
+config_xresources
 ;;
 *)
 usage
