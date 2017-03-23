@@ -34,7 +34,11 @@ function usage() {
     Examples:
         install zsh
         install vim
-        install xresources <-Customises urxvt
+        
+        The following are for arch config
+        install xresources
+        install i3  
+        install rofi
 EOF
 
 }
@@ -157,6 +161,43 @@ function config_xresources() {
     echo_green "Xresources configuration complete!"
 }
 
+function config_i3() {
+
+    echo_green "Configuring i3."
+    
+     if ! hash i3 2>/dev/null; then
+        echo_red "i3 is not installed or in your PATH. Not installing this configuration."
+        return
+    fi
+    
+     # Ensure that i3 directory exist
+    echo "Creating i3 directory in $HOME/.config"
+    mkdir -p $HOME/.config/i3/scripts/
+    
+    echo "Symlinking i3 config files to $HOME/.config/i3/"
+    ln -sf $gitpath/config/i3/* $HOME/.config/i3/
+
+    echo_green "i3 configuration complete!"
+}
+
+function config_rofi() {
+
+    echo_green "Configuring i3."
+    
+      if ! hash rofi 2>/dev/null; then
+        echo_red "rofi is not installed or in your PATH. Not installing this configuration."
+        return
+    fi
+    
+     # Ensure that rofi directory exist
+    echo "Creating rofi directory in $HOME/.config"
+    mkdir -p $HOME/.config/rofi
+    
+    echo "Symlinking rofi config file to $HOME/.config/rofi/"
+    ln -sf $gitpath/config/rofi/config $HOME/.config/rofi/config
+
+    echo_green "rofi configuration complete!"
+}
 
 case $1 in
 zsh)
@@ -167,6 +208,12 @@ config_vim
 ;;
 xresources)
 config_xresources
+;;
+i3)
+config_i3
+;;
+rofi)
+config_rofi
 ;;
 *)
 usage
