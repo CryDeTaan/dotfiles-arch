@@ -96,6 +96,11 @@ function install_zsh() {
 
     echo "Configuring custom zsh theme"
     echo "Creating Directories $oh_my_zsh/custom/themes"
+
+    # Ensure that custom theme  directory exist
+    echo "Creating custom theme directory in $oh_my_zsh/custom/themes/"
+    mkdir -p $oh_my_zsh/custom/themes/
+
     echo "Symlinking zsh-theme file to $oh_my_zsh/custom/themes"
     ln -sf $gitpath/config/oh-my-zsh/custom/themes/* $oh_my_zsh/custom/themes/
 
