@@ -10,6 +10,8 @@ debug=false
 # defaults for file & config locations
 oh_my_zsh="$HOME/.oh-my-zsh"
 zsh_rc="$HOME/.zshrc"
+vim_plugin_dir="$HOME/.vim"
+vim_rc="$HOME/.vimrc"
 
 # helper functions
 # colors!
@@ -142,12 +144,8 @@ function config_vim() {
         echo_yellow "Molokai color scheme already exists."
     fi
 
-    echo "Installing Vim configuration file"
 
-    ## Backup the current one
-    if [[ -f "$vim_rc" ]]; then
-        backup_config $vim_rc
-    fi
+    echo "Installing Vim configuration file"
 
     echo_debug "Symlinking $gitpath/rc/vimrc to $vim_rc"
     ln -sf $gitpath/rc/vimrc $vim_rc
