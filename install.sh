@@ -93,6 +93,12 @@ function install_zsh() {
     echo "Symlinking *.zsh files to $HOME/.dotfiles.d/zshrc.d/"
     ln -sf $gitpath/dotfiles.d/zshrc.d/* $HOME/.dotfiles.d/zshrc.d
 
+
+    echo "Configuring custom zsh theme"
+    echo "Creating Directories $oh_my_zsh/custom/themes"
+    echo "Symlinking zsh-theme file to $oh_my_zsh/custom/themes"
+    ln -sf $gitpath/config/oh-my-zsh/custom/themes/* $oh_my_zsh/custom/themes/
+
     echo_green "ZSH config install complete!"
 
 }

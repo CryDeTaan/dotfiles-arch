@@ -7,7 +7,14 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="af-magic"
+#ZSH_THEME="cypher"
+#ZSH_THEME="gallifrey"
+#ZSH_THEME="gentoo"
+#ZSH_THEME="jreese"
+#ZSH_THEME="minimal"
+#ZSH_THEME="risto"
+#ZSH_THEME="af-magic"
+ZSH_THEME="crydetaan"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
