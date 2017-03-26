@@ -244,7 +244,7 @@ bar {
 exec_always feh --bg-scale /home/crydetaan/Pictures/Wallpapers/wallhaven-143449.png
 
 # Start compton
-exec_always compton
+exec compton
 
 # Run xrdb on my .Xresources file
 exec xrdb /home/crydetaan/.Xresources
@@ -256,5 +256,6 @@ exec export LANG=en_ZA.UTF-8
 
 bindsym $mod+Ctrl+c exec chrome
 
-
+# Take a screenshot of selected area and copy to clipboard
+bindsym $mod+Ctrl+s exec maim -s | xclip -selection clipboard -t image/png
 

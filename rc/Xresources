@@ -1,51 +1,59 @@
 ! special
-*.foreground:   #e6e1dc
-*.background:   #0c0d0b
-*.cursorColor:  #e6e1dc
+*.foreground:   #a6aeb1
+*.background:   #161b1d
+*.cursorColor:  #a6aeb1
 
 ! black
-*.color0:       #2b2b2b
-*.color8:       #5a647e
+*.color0:       #850f8a
+*.color8:       #850f8a
 
 ! red
-*.color1:       #da4939
-*.color9:       #da4939
+*.color1:       #db3b3b
+*.color9:       #db3b3b
 
 ! green
-*.color2:       #a5c261
-*.color10:      #a5c261
+*.color2:       #60e835
+*.color10:      #138937
 
 ! yellow
-*.color3:       #ffc66d
-*.color11:      #ffc66d
+*.color3:       #C6B822
+*.color11:      #618a0f
 
 ! blue
-*.color4:       #6d9cbe
-*.color12:      #6d9cbe
+*.color4:       #257fad
+*.color12:      #257fad
 
 ! magenta
-*.color5:       #b6b3eb
-*.color13:      #b6b3eb
+*.color5:       #850f8a
+*.color13:      #257fad
 
 ! cyan
-*.color6:       #519f50
-*.color14:      #519f50
+*.color6:       #00D2A0
+*.color14:      #46524e
 
 ! white
-*.color7:       #e6e1dc
-*.color15:      #f9f7f3
+*.color7:       #850f8a
+*.color15:      #ebf8ff
+
 
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
-URxvt.font: xft:roboto:regular:size=11
+URxvt.font: xft:roboto:regulat:size=10
 URxvt.depth: 24
 URxvt.url-launcher: /usr/bin/chrome
 URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,matcher
+
+urxvt*termName: rxvt
+
+Xft*dpi:96
+Xft*antialias: true
+Xft*hinting: full
 
 URxvt.letterSpace: -3
 
 URxvt.termName: rxvt-unicode
 
 urxvt*transparent: true
-urxvt*shading: 70
+urxvt*shading: 30
+URxvt.tintColor: white
