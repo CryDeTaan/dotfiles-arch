@@ -100,11 +100,11 @@ set $workspace1 "1:"
 set $workspace2 "2:"
 set $workspace3 "3"
 set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
+set $workspace5 "5:"
+set $workspace6 "6:"
 set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
+set $workspace8 "8:"
+set $workspace9 "9: "
 set $workspace10 "10:"
 
 # switch to workspace
@@ -138,6 +138,9 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Google-chrome"] $workspace1
 assign [class="URxvt"] $workspace2
+assign [class="jetbrains-phpstorm"] $workspace5
+assign [class="ander"] $workspace6
+assign [class="TelegramDesktop"] $workspace8
 
 
 # reload the configuration file
