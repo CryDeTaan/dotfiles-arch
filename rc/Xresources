@@ -33,7 +33,7 @@
 
 ! white
 *.color7:       #850f8a
-*.color15:      #ebf8ff
+*.color15:      #A6AEB1
 
 
 URxvt.urgentOnBell: true
