@@ -271,4 +271,6 @@ bindsym $mod+Ctrl+m exec urxvt -title mutt -e mutt
 # Take a screenshot of selected area and copy to clipboard
 bindsym $mod+Ctrl+s exec maim -s | xclip -selection clipboard -t image/png
 
-exec sleep 5; urxvt -title mutt -e mutt
+exec --no-startup-id sleep 5; urxvt -title mutt -e mutt
+exec --no-startup-id telegram
+exec --no-startup-id slack
