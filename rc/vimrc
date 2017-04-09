@@ -1,20 +1,35 @@
-" Gotta be first
-set nocompatible
-set modeline
+" ------------Vimrc------------ "
+" This is the vim configuration file. Most setting will 
+" be made from outside of this file.
+" 
+" Here we will set some initial items and then load all 
+" the custom config files afterwards.
 
-filetype on
 
-" Set the runtimepath for Vundle
+" ------------Vundle----------- "
+
+" Some settings required by Vundle before loading plugins.
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" To add extra configurations, add your file, numbered
-" in the order you want it loaded to:
-"   ~/.dotfiles.d/vimrc.d/
-"
-" The file name should end with .vim to be loaded correctly.
 
-" Load all user vimconfig files. scripts are globbed lexicographically
-" and can therefore be prefixed numerically.
+" ------------Config----------- "
+
+" Here we will load custom configuration.
+" To add extra configurations, add the files: 
+"   ~/.dotfiles.d/vimrc.d/
+" NOTE:
+" Number the files in the order you want it loaded, 
+" The default will load the files randomly in a random order
+" The file name should end with .vim to be loaded correctly.
+" For Example:
+"   00-VundlePlugins.vim
+"   01-General.vim	 
+
 for f in split(glob('~/.dotfiles.d/vimrc.d/*.vim'), '\n')
     exe 'source' f
 endfor

@@ -8,9 +8,9 @@
 iface="${BLOCK_INSTANCE}"
 dt=3
 unit=Mb
-label="<span font='FontAwesome'>  </span>" # down arrow
-label2="<span font='FontAwesome'>  </span>" # up arrow
-printf_command="printf \"${label}%-5.1f${label2}%-5.1f%s/s\n\", rx, wx, unit;"
+label="<span font='FontAwesome'> </span>" # down arrow
+label2="<span font='FontAwesome'> </span>" # up arrow
+printf_command="printf \"${label}%-4.1f${label2}%-4.1f%s/s\n\", rx, wx, unit;"
 
 function default_interface {
     ip route | awk '/^default via/ {print $5; exit}'

@@ -1,17 +1,22 @@
+" ---------- Vundle ---------- "
+
+" This file we run all the Vundle Plugins
+
+" Start the Vundle Plugin manager
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
-" ----- Making Vim look good ------------------------------------------
-"Plugin 'tomasr/molokai'
-"Plugin 'bling/vim-airline'
 
-" ----- Vim as a programmer's text editor -----------------------------
+Plugin 'tpope/vim-vinegar'
+
+
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'scrooloose/syntastic'
 
-" ----- Working with Git ----------------------------------------------
-Plugin 'airblade/vim-gitgutter'
+Plugin 'ctrlpvim/ctrlp.vim'
 
-call vundle#end()
+
+" Once all of the Plugins have been added following is required
+call vundle#end()            " required
+filetype plugin indent on    " required

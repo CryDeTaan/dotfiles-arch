@@ -35,20 +35,22 @@
 *.color7:       #8AFF8B
 *.color15:      #8598F7
 
+
 URxvt.urgentOnBell: true
 URxvt.scrollBar: false
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=14, xft:FontAwesome:pixelsize=14 
-!URxvt.font: xrft:DejaVu Sans Mono:pixelsize=14, xft:FontAwesome:pixelsize=14
+URxvt.font: xft:roboto:size=10
 URxvt.depth: 24
 URxvt.url-launcher: /usr/bin/chrome
 URxvt.matcher.button: 1
 URxvt.perl-ext-common: default,matcher
 
-!Xft*dpi:96
-Xft*antialias: true
-!Xft*hinting: full
+urxvt*termName: rxvt
 
-!URxvt.letterSpace: -3
+Xft*dpi:96
+Xft*antialias: true
+Xft*hinting: full
+
+URxvt.letterSpace: -2
 
 URxvt.termName: rxvt-unicode
 
