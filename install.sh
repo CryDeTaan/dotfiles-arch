@@ -137,14 +137,6 @@ function config_vim() {
         echo_yellow "Vundle already exists."
     fi
 
-    # Molokai
-    if [[ ! -d "$vim_plugin_dir/bundle/molokai" ]]; then
-        git clone https://github.com/tomasr/molokai $vim_plugin_dir/bundle/molokai
-    else
-        echo_yellow "Molokai color scheme already exists."
-    fi
-
-
     echo "Installing Vim configuration file"
 
     echo_debug "Symlinking $gitpath/rc/vimrc to $vim_rc"
