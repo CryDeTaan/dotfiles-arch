@@ -1,0 +1,111 @@
+// vim:ts=4:sw=4:et
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 388,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "crydetaan@Arch: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+               "class": "URxvt",
+               "instance": "urxvt1"
+               // "title": "urxvt1"
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 388,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "crydetaan@Arch: ~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "URxvt",
+                "instance": "urxvt2"
+               // "title": "urxvt2"
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    // splitv split container with 2 children
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 388,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "crydetaan@Arch: ~",
+            "percent": 0.93,
+            "swallows": [
+               {
+                "class": "URxvt",
+                "instance": "urxvt3"
+                // "title": "urxvt3"
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 388,
+               "width": 724,
+               "x": 0,
+               "y": 0
+            },
+            "name": "crydetaan@Arch: ~",
+            "percent": 0.0699999999999997,
+            "swallows": [
+               {
+                "class": "URxvt",
+                "instance": "urxvt4"
+               // "title": "urxvt4"
+               // "transient_for": "^$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

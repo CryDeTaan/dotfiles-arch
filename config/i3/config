@@ -150,6 +150,7 @@ assign [class="skypeforlinux"] $workspace8
 
 workspace $workspace2 output HDMI-0
 workspace $workspace5 output HDMI-0
+workspace $workspace6 output HDMI-0
 workspace $workspace8 output HDMI-0
 workspace $workspace9 output HDMI-0
 
@@ -261,6 +262,9 @@ exec_always --no-startup-id feh --bg-scale /home/crydetaan/Pictures/Wallpapers/w
 # Start compton
 exec --no-startup-id compton
 
+exec --no-startup-id "i3-msg 'workspace 6:; append_layout ~/.dotfiles/config/i3/layouts/devWS6.json; workspace 2:'"
+
+
 # Run xrdb on my .Xresources file
 exec --no-startup-id xrdb /home/crydetaan/.Xresources
 
@@ -277,5 +281,9 @@ bindsym $mod+Ctrl+m exec urxvt -title mutt -e mutt
 bindsym $mod+Ctrl+s exec maim -s | xclip -selection clipboard -t image/png
 
 exec --no-startup-id sleep 5; urxvt -title mutt -e mutt
+exec --no-startup-id sleep 5; urxvt -name urxvt1
+exec --no-startup-id sleep 5; urxvt -name urxvt2
+exec --no-startup-id sleep 5; urxvt -name urxvt3
+exec --no-startup-id sleep 5; urxvt -name urxvt4
 exec --no-startup-id telegram-desktop
 exec --no-startup-id slack
