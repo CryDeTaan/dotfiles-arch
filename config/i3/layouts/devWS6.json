@@ -21,8 +21,8 @@
             "percent": 0.5,
             "swallows": [
                {
-               "class": "URxvt",
-               "instance": "urxvt1"
+               "class": "konsole",
+               "instance": "konsole1"
                // "title": "urxvt1"
                // "transient_for": "^$"
                }
@@ -43,8 +43,8 @@
             "percent": 0.5,
             "swallows": [
                {
-                "class": "URxvt",
-                "instance": "urxvt2"
+                "class": "konsole",
+                "instance": "konsole2"
                // "title": "urxvt2"
                // "transient_for": "^$"
                }
@@ -76,8 +76,8 @@
             "percent": 0.93,
             "swallows": [
                {
-                "class": "URxvt",
-                "instance": "urxvt3"
+                "class": "konsole",
+                "instance": "konsole3"
                 // "title": "urxvt3"
                // "transient_for": "^$"
                }
@@ -98,8 +98,8 @@
             "percent": 0.0699999999999997,
             "swallows": [
                {
-                "class": "URxvt",
-                "instance": "urxvt4"
+                "class": "konsole",
+                "instance": "konsole4"
                // "title": "urxvt4"
                // "transient_for": "^$"
                }
