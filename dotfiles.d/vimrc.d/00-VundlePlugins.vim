@@ -15,6 +15,7 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
+Plugin 'airblade/vim-gitgutter'
 
 " Once all of the Plugins have been added following is required
 call vundle#end()            " required
