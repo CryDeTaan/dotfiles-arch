@@ -30,7 +30,8 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -137,7 +138,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # For example: WM_CLASS(STRING) = "urxvt", "URxvt" for the rxvt unicode terminal application.
 
 assign [class="Google-chrome"] $workspace1
-assign [class="URxvt" title="mutt"] $workspace9
+assign [class="konsole" title="mutt"] $workspace9
 #assign [class="URxvt"] $workspace2
 assign [class="jetbrains-phpstorm"] $workspace5
 assign [class="ander"] $workspace6
@@ -280,10 +281,10 @@ bindsym $mod+Ctrl+m exec urxvt -title mutt -e mutt
 # Take a screenshot of selected area and copy to clipboard
 bindsym $mod+Ctrl+s exec maim -s | xclip -selection clipboard -t image/png
 
-exec --no-startup-id sleep 5; urxvt -title mutt -e mutt
-exec --no-startup-id sleep 5; urxvt -name urxvt1
-exec --no-startup-id sleep 5; urxvt -name urxvt2
-exec --no-startup-id sleep 5; urxvt -name urxvt3
-exec --no-startup-id sleep 5; urxvt -name urxvt4
+exec --no-startup-id sleep 5; konsole -title mutt -e mutt
+exec --no-startup-id sleep 5; konsole -name konsole1
+exec --no-startup-id sleep 5; konsole -name konsole2
+exec --no-startup-id sleep 5; konsole -name konsole3
+exec --no-startup-id sleep 5; konsole -name konsole4
 exec --no-startup-id telegram-desktop
 exec --no-startup-id slack
